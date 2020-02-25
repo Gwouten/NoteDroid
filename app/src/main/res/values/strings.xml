@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">NoteDroid</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="str_tv_detail_date_created">Created on:</string>
+    <string name="str_tv_detail_date_edited">Edited on:</string>
+    <string name="hint_et_note_title">Title</string>
+    <string name="hint_et_note_content">New note</string>
+    <string name="str_btn_note_delete">Delete</string>
 </resources>
