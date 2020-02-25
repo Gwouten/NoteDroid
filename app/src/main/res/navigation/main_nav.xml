@@ -21,7 +21,11 @@
         android:id="@+id/createFragment"
         android:name="com.example.notedroid.fragments.CreateFragment"
         android:label="Note"
-        tools:layout="@layout/fragment_note_detail" />
+        tools:layout="@layout/fragment_note_detail" >
+        <action
+            android:id="@+id/detail_to_edit"
+            app:destination="@id/noteFragment" />
+    </fragment>
     <fragment
         android:id="@+id/noteFragment"
         android:name="com.example.notedroid.fragments.NoteFragment"

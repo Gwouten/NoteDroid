@@ -56,6 +56,16 @@ public class CreateFragment extends Fragment {
         btnSaveNote = rootView.findViewById(R.id.btn_save_note);
         btnSaveNote.setOnClickListener(saveNoteHandler);
 
+        // text invullen als er op edit knop is geklikt
+        Bundle receivedData = getArguments();
+        if(receivedData != null){
+            if(receivedData.containsKey("originalData")){
+                Note note = (Note) receivedData.getSerializable("originalData");
+                etNewNoteContent.setText(note.getContent());
+                etNewNoteTitle.setText(note.getTitle());
+            }
+        }
+
         return rootView;
     }
 
