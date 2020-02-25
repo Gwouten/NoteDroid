@@ -8,20 +8,23 @@
     <fragment
         android:id="@+id/noteListFragment"
         android:name="com.example.notedroid.fragments.NoteListFragment"
-        android:label="fragment_note_list"
-        tools:layout="@layout/fragment_note_list" >
+        android:label="NoteDroid"
+        tools:layout="@layout/fragment_note_list">
         <action
             android:id="@+id/list_to_note"
             app:destination="@+id/noteFragment" />
+        <action
+            android:id="@+id/list_to_create_note"
+            app:destination="@id/createFragment" />
     </fragment>
     <fragment
         android:id="@+id/createFragment"
         android:name="com.example.notedroid.fragments.CreateFragment"
-        android:label="fragment_note_detail"
+        android:label="Note"
         tools:layout="@layout/fragment_note_detail" />
     <fragment
         android:id="@+id/noteFragment"
         android:name="com.example.notedroid.fragments.NoteFragment"
-        android:label="fragment_create"
+        android:label="Create note"
         tools:layout="@layout/fragment_create" />
 </navigation>

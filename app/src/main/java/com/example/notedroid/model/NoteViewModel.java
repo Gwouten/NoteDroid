@@ -1,5 +1,7 @@
 package com.example.notedroid.model;
 
+import android.util.Log;
+
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -34,5 +36,10 @@ public class NoteViewModel extends ViewModel {
             loadNotes();
         }
         return notes;
+    }
+
+    public void addItems(Note note){
+        Log.d("test", notes.getValue().toString());
+        notes.getValue().add(note);
     }
 }

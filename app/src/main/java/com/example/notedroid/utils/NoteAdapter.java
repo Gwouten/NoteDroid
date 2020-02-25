@@ -43,10 +43,10 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
 
         public NoteViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvTitle = itemView.findViewById(R.id.tv_note_title);
-            tvEditDate = itemView.findViewById(R.id.tv_note_edit_date);
+            tvTitle       = itemView.findViewById(R.id.tv_note_title);
+            tvEditDate    = itemView.findViewById(R.id.tv_note_edit_date);
             btnDeleteNote = itemView.findViewById(R.id.btn_note_delete);
-            cardView = itemView.findViewById(R.id.cv_card);
+            cardView      = itemView.findViewById(R.id.cv_card);
 
             cardView.setOnClickListener(ReadNoteHandler);
         }
@@ -76,7 +76,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
         Note currentNote = items.get(position);
         holder.tvTitle.setText(currentNote.getTitle());
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            holder.tvEditDate.setText(currentNote.getEditDate().format(DateTimeFormatter.ofPattern("dd MM yyyy")));
+            holder.tvEditDate.setText(currentNote.getEditDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")));
         }
     }
 
@@ -89,4 +89,5 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.NoteViewHolder
     public void addItems(ArrayList<Note> notes){
         items.addAll(notes);
     }
+
 }
