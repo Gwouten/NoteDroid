@@ -9,7 +9,11 @@
         android:id="@+id/noteListFragment"
         android:name="com.example.notedroid.fragments.NoteListFragment"
         android:label="fragment_note_list"
-        tools:layout="@layout/fragment_note_list" />
+        tools:layout="@layout/fragment_note_list" >
+        <action
+            android:id="@+id/list_to_note"
+            app:destination="@+id/noteFragment" />
+    </fragment>
     <fragment
         android:id="@+id/createFragment"
         android:name="com.example.notedroid.fragments.CreateFragment"

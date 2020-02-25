@@ -2,9 +2,10 @@ package com.example.notedroid.model;
 
 import android.os.Build;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Note {
+public class Note implements Serializable {
 
     private String title, content;
     private final LocalDate createDate;

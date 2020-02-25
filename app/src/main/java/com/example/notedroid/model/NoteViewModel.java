@@ -16,6 +16,15 @@ public class NoteViewModel extends ViewModel {
         newNotes.add(new Note(
                 "Welcome to NoteDroid",
                 "This is just an example note. You can delete it by pressing the delete button below. Happy noting!"));
+        newNotes.add(new Note(
+                "Welcome to NoteDroid",
+                "This is just an example note. You can delete it by pressing the delete button below. Happy noting!"));
+        newNotes.add(new Note(
+                "Welcome to NoteDroid",
+                "This is just an example note. You can delete it by pressing the delete button below. Happy noting!"));
+        newNotes.add(new Note(
+                "Welcome to NoteDroid",
+                "This is just an example note. You can delete it by pressing the delete button below. Happy noting!"));
         notes.setValue(newNotes);
     }
 
